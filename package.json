@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/rahultah/JS_WT_1#readme",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "file-system": "^2.2.2",
+    "font-awesome": "^4.7.0",
     "lite-server": "^2.5.4",
     "requirejs": "^2.3.6"
   }

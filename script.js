@@ -1,9 +1,7 @@
 console.log("Connected")
-var requirejs = require('fs');
 
         let movies = [];
-        // example {id:1592304983049, title: 'Deadpool', year: 2015}
-        const addMovie = (ev)=>{
+            const addMovie = (ev)=>{
             ev.preventDefault();  //to stop the form submitting
             let movie = {
                 id: Date.now(),

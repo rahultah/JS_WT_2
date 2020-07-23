@@ -5,7 +5,7 @@ console.log("connected")
         const addMovie = (ev)=>{
             ev.preventDefault();  //to stop the form submitting
             let movie = {
-                id: Date.now(),
+                id: new Date().getTime(),
                 title: document.getElementById('title').value,
                 year: document.getElementById('yr').value
             }
@@ -18,6 +18,7 @@ console.log("connected")
                 var table = document.getElementById('myTable')
                 for (var i = 0; i < data.length; i++){
                     var row = `<tr>
+                                    <td>${data[i].id}</td>
                                     <td>${data[i].title}</td>
                                     <td>${data[i].year}</td>
                                     

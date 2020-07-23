@@ -1,37 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="bundle.js"></script>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        function page_selector(shown, hidden) {
-          document.getElementById(shown).style.display='block';
-          document.getElementById(hidden).style.display='none';
-          return false;
-        }
-    </script>
-    <script>
-        function show(shown, hidden) {
-          document.getElementById(shown).style.display='block';
-          document.getElementById(hidden).style.display='none';
-          return false;
-        }
-        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie DB Management</title>
+        <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="js/bundle.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/shift.js"></script>
+        
+        
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <a href="#" onclick="return show('Page2','Page1');">Show Table</a>
-    <a href="#" onclick="return show('Page1','Page2');">Show Form</a>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <a href="" class="navbar-brand mr-auto">Movie Database Management</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li id="btn1" class="nav-item active"><a class="nav-link" onclick="page_selector('Page1','Page2','Page3');myFunction();" href="#"> <span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li id="btn2" class="nav-item"><a class="nav-link" onclick="page_selector('Page2','Page1','Page3'); myFunction2();" href="#"> <span class="fa fa-wpforms fa-lg"></span> Add Movie</a></li>
+                    <li id="btn3" class="nav-item"><a class="nav-link" onclick="page_selector('Page3','Page2','Page1');myFunction3();" href="#" href="#"> <span class="fa fa-list fa-lg"></span> Show Movies</a></li>
+    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <header class="jumbotron">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="">
+                        <h1>Movie DB Management</h1>
+                        <p>Gather all the movies you need in one place</p>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
     <div id="Page1">
+        <h1>Page1</h1>
+    </div>
+    <div id="Page2" style="display: none;">
         <form>
             <div class="formBox">
-                <label for="title">Field 1</label>
+                <label for="title">Movie Title</label>
                 <input type="text" id="title" placeholder="Title"/>
             </div>
             <div class="formBox">
-                <label for="yr">Field 2</label>
+                <label for="yr">Release Year</label>
                 <input type="number" id="yr" placeholder="Year"/>
             </div>
             <div class="formBox">
@@ -43,11 +76,13 @@
         </form>
       </div>
     
-      <div id="Page2" style="display:none">
+      <div id="Page3" style="display:none">
         <table class="table table-striped">
             <tr  class="bg-info">
-                <th>Field1</th>
-                <th>Field2</th>
+                <th>Timestamp</th>
+                <th>Title</th>
+                <th>Released Year</th>
+
                 
             </tr>
         
@@ -56,65 +91,11 @@
             </tbody>
         </table>         
       </div>
+      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 
 
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Putting User Input into JS Objects</title>
-    <script src="bundle.js"></script>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        function page_selector(shown, hidden) {
-          document.getElementById(shown).style.display='block';
-          document.getElementById(hidden).style.display='none';
-          return false;
-        }
-    </script>
- 
-</head>
-<body>
-    <div class="Page1">
-    <form>
-        <div class="formBox">
-            <label for="title">Field 1</label>
-            <input type="text" id="title" placeholder="Title"/>
-        </div>
-        <div class="formBox">
-            <label for="yr">Field 2</label>
-            <input type="number" id="yr" placeholder="Year"/>
-        </div>
-        <div class="formBox">
-            <button id="btn">Click to Add</button>
-        </div>
-        <div id="msg">
-            <pre></pre>
-        </div>
-    </form>
-    <a href="#" onclick="return page_selector('Page2','Page1');">Show page 2</a>
-
-</div>
-<div class="Page2" style="display:none">
-    <table class="table table-striped">
-        <tr  class="bg-info">
-            <th>Name</th>
-            <th>Age</th>
-            <th>Birthday</th>
-        </tr>
-    
-        <tbody id="myTable">
-            
-        </tbody>
-    </table> 
-    <a href="#" onclick="return page_selector('Page1','Page2');">Show page 2</a>
-
-</div>
-
-</body>
-</html> -->
