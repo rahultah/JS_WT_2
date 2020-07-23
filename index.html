@@ -1,6 +1,15 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="bundle.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function page_selector(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+    </script>
     <script>
         function show(shown, hidden) {
           document.getElementById(shown).style.display='block';
@@ -13,21 +22,46 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+    <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
     <div id="Page1">
-        Content of page 1
-        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+        <form>
+            <div class="formBox">
+                <label for="title">Field 1</label>
+                <input type="text" id="title" placeholder="Title"/>
+            </div>
+            <div class="formBox">
+                <label for="yr">Field 2</label>
+                <input type="number" id="yr" placeholder="Year"/>
+            </div>
+            <div class="formBox">
+                <button id="btn">Click to Add</button>
+            </div>
+            <div id="msg">
+                <pre></pre>
+            </div>
+        </form>
       </div>
     
       <div id="Page2" style="display:none">
-        Content of page 2
-        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+        <table class="table table-striped">
+            <tr  class="bg-info">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Birthday</th>
+            </tr>
+        
+            <tbody id="myTable">
+                
+            </tbody>
+        </table>         
       </div>
 </body>
-</html> -->
+</html>
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,15 +70,17 @@
     <title>Putting User Input into JS Objects</title>
     <script src="bundle.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <style>
-        
-        .formBox{
-            padding: 0.5rem 2rem;
+    <script>
+        function page_selector(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
         }
-    </style>
+    </script>
+ 
 </head>
 <body>
+    <div class="Page1">
     <form>
         <div class="formBox">
             <label for="title">Field 1</label>
@@ -61,6 +97,10 @@
             <pre></pre>
         </div>
     </form>
+    <a href="#" onclick="return page_selector('Page2','Page1');">Show page 2</a>
+
+</div>
+<div class="Page2" style="display:none">
     <table class="table table-striped">
         <tr  class="bg-info">
             <th>Name</th>
@@ -71,6 +111,10 @@
         <tbody id="myTable">
             
         </tbody>
-    </table>  
+    </table> 
+    <a href="#" onclick="return page_selector('Page1','Page2');">Show page 2</a>
+
+</div>
+
 </body>
-</html>
+</html> -->
