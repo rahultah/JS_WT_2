@@ -1,7 +1,7 @@
 {
-  "name": "git-test",
+  "name": "js_wt",
   "version": "1.0.0",
-  "description": "This is to test node and git",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
@@ -10,15 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rahultah/git-test.git"
+    "url": "git+https://github.com/rahultah/JS_WT_1.git"
   },
   "author": "Rahul Tah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rahultah/git-test/issues"
+    "url": "https://github.com/rahultah/JS_WT_1/issues"
   },
-  "homepage": "https://github.com/rahultah/git-test#readme",
+  "homepage": "https://github.com/rahultah/JS_WT_1#readme",
   "dependencies": {
-    "lite-server": "^2.5.4"
+    "file-system": "^2.2.2",
+    "lite-server": "^2.5.4",
+    "requirejs": "^2.3.6"
   }
 }

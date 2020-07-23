@@ -1,13 +1,76 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>Sample repo</h1>
-    <h1>This is the another heading</h1>
+    <div id="Page1">
+        Content of page 1
+        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+      </div>
+    
+      <div id="Page2" style="display:none">
+        Content of page 2
+        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+      </div>
+</body>
+</html> -->
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putting User Input into JS Objects</title>
+    <script src="bundle.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        
+        .formBox{
+            padding: 0.5rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="formBox">
+            <label for="title">Field 1</label>
+            <input type="text" id="title" placeholder="Title"/>
+        </div>
+        <div class="formBox">
+            <label for="yr">Field 2</label>
+            <input type="number" id="yr" placeholder="Year"/>
+        </div>
+        <div class="formBox">
+            <button id="btn">Click to Add</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+    </form>
+    <table class="table table-striped">
+        <tr  class="bg-info">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Birthday</th>
+        </tr>
+    
+        <tbody id="myTable">
+            
+        </tbody>
+    </table>  
 </body>
 </html>
