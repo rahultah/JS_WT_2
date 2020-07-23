@@ -29,10 +29,10 @@ console.log("connected")
             }
 
 
-            //for display purposes only
-            console.warn('added' , {movies} );
-            let pre = document.querySelector('#msg pre');
-            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+            //Comment out if you need to display JSON in your main HTML
+            // console.warn('added' , {movies} );
+            // let pre = document.querySelector('#msg pre');
+            // pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
 
              
 
