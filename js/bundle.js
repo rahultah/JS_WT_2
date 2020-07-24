@@ -6,8 +6,8 @@ function displayRadioValue() {
     for(i = 0; i < ele.length; i++) { 
         if(ele[i].checked)
         window.genre = ele[i].value  
-        document.getElementById("radioresults").innerHTML
-                =window.genre; 
+        // document.getElementById("radioresults").innerHTML
+        //         =window.genre; 
     } 
 } 
 
@@ -28,8 +28,10 @@ function displayRadioValue() {
             buildTable(movies)
             
             
+            
 
             function buildTable(data){
+                movies = []
                 var table = document.getElementById('myTable')
                 for (var i = 0; i < data.length; i++){
                     var row = `<tr>
