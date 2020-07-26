@@ -9,7 +9,34 @@ function displayRadioValue() {
         // document.getElementById("radioresults").innerHTML
         //         =window.genre; 
     } 
-} 
+}
+function validateForm(){
+    // alert("Validate working")
+    var title  = document.forms["movform"]["movietitle"].value;
+    var actorname  = document.forms["movform"]["actorname"].value;
+    var year = document.forms["movform"]["relyear"].value;
+
+    // alert(year)
+    // alert(x)
+    if (title == "") {
+        alert("Please Enter a valid title");
+        return false;
+      }
+    else if (actorname == "") {
+        alert("Please Enter a valid actor name");
+        return false;
+      }
+    else if (year >= 40 && year <= 60) {
+        // alert(year)
+        alert("The range should be in between 1900 to 2022");
+        return false;
+      }
+    
+
+    
+    
+}
+
 
 
         let movies = [];
@@ -34,6 +61,10 @@ function displayRadioValue() {
                 movies = []
                 var table = document.getElementById('myTable')
                 for (var i = 0; i < data.length; i++){
+                    if (window.genre == undefined){
+                        alert("Please Enter a Genre")
+                        break
+                    }
                     var row = `<tr>
                                     <td>${data[i].id}</td>
                                     <td>${data[i].title}</td>

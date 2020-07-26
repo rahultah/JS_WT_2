@@ -69,39 +69,39 @@
           </div>
     </div>
     <div id="Page2" style="display: none;">
-        <form>
+        <form name="movform">
             <div class="form-group">
                 <label>Movie Title</label>
-    <input type="text" class="form-control" id="movietitle"  placeholder="Enter the Name of the movie">
+    <input type="text" name="movietitle" class="form-control" id="movietitle"  placeholder="Enter the Name of the movie" required>
             </div>
             <div class="form-group">
                 <label>Release Year</label>
-    <input type="number" class="form-control" id="relyear"  placeholder="Enter the Release Year of the movie">
+    <input type="number" name="relyear" class="form-control" id="relyear"  placeholder="Enter the Release Year of the movie" required>
             </div>
             <div class="form-group">
                 <label>Movie Lead Actor</label>
-    <input type="text" class="form-control" id="actor"  placeholder="Enter the Lead actor of the movie">
+    <input type="text" name="actorname" class="form-control" id="actor"  placeholder="Enter the Lead actor of the movie" required>
             </div>
-            <div class="form-check form-check">
+            <div class="form-check form-check" >
                 <label>Select Genre</label>
                 <br>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Action">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Action" required>
                 <label class="form-check-label" for="inlineRadio1">Action</label>
               </div>
               <div class="form-check form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Thriller">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Thriller"required >
                 <label class="form-check-label" for="inlineRadio2">Thriller</label>
               </div>
               <div class="form-check form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Sci-Fi">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Sci-Fi"required>
                 <label class="form-check-label" for="inlineRadio1">Sci-Fi</label>
               </div>
               <div class="form-check form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Comedy">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Comedy"required>
                 <label class="form-check-label" for="inlineRadio2">Comedy</label>
               </div>
             <div class="formBox">
-                <button class="btn btn-primary" id="btn" onclick="displayRadioValue()">Click to Add</button>
+                <button class="btn btn-primary" id="btn" onclick=" validateForm();displayRadioValue()">Click to Add</button>
 
             </div>
             <div id="msg">
@@ -110,6 +110,7 @@
         </form>
 
         <script>
+
         </script>
         <div id="radioresults"></div> 
 
