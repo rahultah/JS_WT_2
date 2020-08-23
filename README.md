@@ -1,5 +1,5 @@
 # JS_WT_2
-Live Website: - https://rahultah.github.io/JS_WT_1/#
+Live Website: - https://rahultah.github.io/JS_WT_2/#
 This is fairly simple single page website which will helps user manage their movies in a organized manner. Timestamp feature is also included in the website for east
 
 
